@@ -145,7 +145,7 @@ namespace ViegenerCipher
             string textToEncrypt = EncryptInput.Text;
             string key = EncryptKey.Text;
             FormatValues(key, textToEncrypt, out string formattedKey, out string formattedText);
-            if (formattedText == "" || formattedKey == "")
+            if (AreEntriesEmpty(formattedKey,formattedText))
             {
                 EncryptOutputTextBox.Text = "Either key or input text can't be empty or contain non letter characters";
                 return;
@@ -156,13 +156,17 @@ namespace ViegenerCipher
             DecryptInput.Text = encryptedText;
             DecryptKey.Text = parsedKey;
         }
-        static void FormatValues(string key, string text, out string formattedKey, out string formattedText)
+        private static bool AreEntriesEmpty(string key, string text)
+        {
+            return key == "" || text == "" ? true : false;
+        }
+        private static void FormatValues(string key, string text, out string formattedKey, out string formattedText)
         {
             formattedText = FormatAndRemoveUnwantedChars(text);
             string tempKey = FormatAndRemoveUnwantedChars(key);
             formattedKey = RemoveSpacesFromInside(tempKey);
         }
-        static string RemoveSpacesFromInside(string key)
+        private static string RemoveSpacesFromInside(string key)
         {
             string output = "";
             for(int i = 0; i < key.Length; i++)
@@ -172,7 +176,7 @@ namespace ViegenerCipher
             }
             return output;
         }
-        static string FormatAndRemoveUnwantedChars(string input)
+        private static string FormatAndRemoveUnwantedChars(string input)
         {
             string text = input.Trim();
             string output = "";
@@ -191,7 +195,29 @@ namespace ViegenerCipher
 
         private void DecryptButton_Click(object sender, RoutedEventArgs e)
         {
+            string textToDecrypt = DecryptInput.Text;
+            string key = DecryptKey.Text;
+            FormatValues(key, textToDecrypt, out string formattedKey, out string formattedText);
+            if (AreEntriesEmpty(formattedKey, formattedText))
+            {
+                DecryptOutputTextBox.Text = "Either key or input text can't be empty or contain non letter characters";
+                return;
+            }
+            string parsedKey = ParseKeyWithText(formattedKey, formattedText);
+            string decryptedText = Decrypt(parsedKey, formattedText, CipherFieldArr);
+            DecryptOutputTextBox.Text = decryptedText;
 
+
+        }
+
+        private void ClearButton_Click(object sender, RoutedEventArgs e)
+        {
+            EncryptInput.Text = "";
+            EncryptKey.Text = "";
+            EncryptOutputTextBox.Text = "";
+            DecryptInput.Text = "";
+            DecryptKey.Text = "";
+            DecryptOutputTextBox.Text = "";
         }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ViegenerCipher"
         mc:Ignorable="d"
-        Title="Viegener Cipher encrypter application" Height="460" Width="470
+        Title="Viegener Cipher encrypter application" Height="500" Width="470
         ">
     <Grid Background="#FFAEF0A8">
         <Grid.ColumnDefinitions>
@@ -27,5 +27,6 @@
         <Label Content="Decrypted value:" HorizontalAlignment="Left" Margin="181,355,0,0" VerticalAlignment="Top" Width="100"/>
         <TextBox x:Name="DecryptOutputTextBox" HorizontalAlignment="Left" Margin="60,381,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="341"/>
         <Button x:Name="DecryptButton" Content="Decrypt" HorizontalAlignment="Center" VerticalAlignment="Top" Width="144" Margin="0,336,0,0" Click="DecryptButton_Click"/>
+        <Button x:Name="ClearButton" Content="Clear fields" HorizontalAlignment="Center" Margin="0,417,0,0" VerticalAlignment="Top" Height="23" Width="144" Click="ClearButton_Click"/>
     </Grid>
 </Window>
