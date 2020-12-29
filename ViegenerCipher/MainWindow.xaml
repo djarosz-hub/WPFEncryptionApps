@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ViegenerCipher"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="Viegener Cipher encrypter application" Height="460" Width="470
+        ">
+    <Grid Background="#FFAEF0A8">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="EncrypterLabel" Content="Viegener Cipher encrypter" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="20" HorizontalAlignment="Center" Width="242"/>
+        <TextBox x:Name="EncryptInput" HorizontalAlignment="Left" Margin="60,66,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="341"/>
+        <TextBox x:Name="EncryptKey" HorizontalAlignment="Left" Margin="60,105,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="341"/>
+        <Label Content="Text to encrypt:" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top"/>
+        <Label Content="Key:" HorizontalAlignment="Left" Margin="211,79,0,0" VerticalAlignment="Top"/>
+        <Label Content="Encrypted value:" HorizontalAlignment="Center" Margin="0,155,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="EncryptOutputTextBox" HorizontalAlignment="Left" Margin="60,181,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="341"/>
+        <Button x:Name="EncryptButton" Content="Encrypt" HorizontalAlignment="Center" VerticalAlignment="Top" Width="144" Margin="0,136,0,0" Click="EncryptButton_Click"/>
+        <Label x:Name="DecrypterLabel" Content="Decrypter" Margin="179,205,0,0" VerticalAlignment="Top" FontSize="20" HorizontalAlignment="Left" Width="108" Height="59"/>
+        <TextBox x:Name="DecryptInput" HorizontalAlignment="Left" Margin="60,268,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="341"/>
+        <TextBox x:Name="DecryptKey" HorizontalAlignment="Left" Margin="60,308,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="341"/>
+        <Label Content="Text to decrypt:" HorizontalAlignment="Left" Margin="181,239,0,0" VerticalAlignment="Top"/>
+        <Label Content="Key:" HorizontalAlignment="Center" Margin="0,282,0,0" VerticalAlignment="Top"/>
+        <Label Content="Decrypted value:" HorizontalAlignment="Left" Margin="181,355,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="DecryptOutputTextBox" HorizontalAlignment="Left" Margin="60,381,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="341"/>
+        <Button x:Name="DecryptButton" Content="Decrypt" HorizontalAlignment="Center" VerticalAlignment="Top" Width="144" Margin="0,336,0,0" Click="DecryptButton_Click"/>
     </Grid>
 </Window>
