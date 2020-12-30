@@ -16,17 +16,17 @@
         <Label Content="Decrypted text:" HorizontalAlignment="Left" Margin="34,345,0,0" VerticalAlignment="Top" FontSize="16"/>
         <Label Content="Encrypter" HorizontalAlignment="Center" Margin="0,64,0,0" VerticalAlignment="Top" FontSize="24"/>
         <Label Content="Decrypter" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="24" Margin="0,228,0,0"/>
-        <TextBox x:Name="EncryptInput" HorizontalAlignment="Left" Margin="162,121,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="24"/>
-        <TextBox x:Name="EncryptKey" HorizontalAlignment="Left" Margin="162,154,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="24"/>
-        <TextBox x:Name="EncryptOutput" HorizontalAlignment="Left" Margin="162,186,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="24"/>
-        <TextBox x:Name="DecryptInput" HorizontalAlignment="Left" Margin="162,282,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="24"/>
-        <TextBox x:Name="DecryptKey" HorizontalAlignment="Left" Margin="162,316,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="24"/>
-        <TextBox x:Name="DecryptOutput" HorizontalAlignment="Left" Margin="162,349,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="24"/>
-        <Button x:Name="EncryptBtn" Content="Encrypt" HorizontalAlignment="Left" Margin="489,76,0,0" VerticalAlignment="Top" Width="83" Height="27"/>
-        <Button x:Name="DecryptBtn" Content="Decrypt" HorizontalAlignment="Left" Margin="489,240,0,0" VerticalAlignment="Top" Width="83" Height="27"/>
-        <TextBox x:Name="KeyTable" HorizontalAlignment="Left" Margin="607,150,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="174"/>
+        <TextBox x:Name="EncryptInput" VerticalContentAlignment ="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="162,121,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="24"/>
+        <TextBox x:Name="EncryptKey" VerticalContentAlignment ="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="162,154,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="24"/>
+        <TextBox x:Name="EncryptOutput" VerticalContentAlignment ="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="162,186,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="24"/>
+        <TextBox x:Name="DecryptInput" VerticalContentAlignment ="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="162,282,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="24"/>
+        <TextBox x:Name="DecryptKey" VerticalContentAlignment ="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="162,316,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="24"/>
+        <TextBox x:Name="DecryptOutput" VerticalContentAlignment ="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="162,349,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="24"/>
+        <Button x:Name="EncryptBtn" Content="Encrypt" HorizontalAlignment="Left" Margin="489,76,0,0" VerticalAlignment="Top" Width="83" Height="27" Click="EncryptBtn_Click"/>
+        <Button x:Name="DecryptBtn" Content="Decrypt" HorizontalAlignment="Left" Margin="489,240,0,0" VerticalAlignment="Top" Width="83" Height="27" Click="DecryptBtn_Click"/>
+        <TextBox x:Name="KeyTable"  VerticalContentAlignment ="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="607,150,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="178" FontFamily="Lucida Console" FontSize="23"/>
         <Label Content="Key table:" HorizontalAlignment="Left" Margin="621,106,0,0" VerticalAlignment="Top" FontSize="24"/>
-        <Button x:Name="ClearBtn" Content="Clear fields" HorizontalAlignment="Left" Margin="607,349,0,0" VerticalAlignment="Top" Height="24" Width="140"/>
+        <Button x:Name="ClearBtn" Content="Clear fields" HorizontalAlignment="Left" Margin="607,349,0,0" VerticalAlignment="Top" Height="24" Width="140" Click="ClearBtn_Click"/>
 
     </Grid>
 </Window>
