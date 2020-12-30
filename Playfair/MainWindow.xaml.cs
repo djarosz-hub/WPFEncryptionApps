@@ -75,7 +75,7 @@ namespace Playfair
                 text = LookForDoubledLetters(text);
                 string[] slicedText = SliceTextToDigrams(text);
                 string encryptedText = Encrypt(CipherField, slicedText);
-                EncryptOutput.Text = encryptedText;
+                EncryptOutput.Text = RemoveSpacesFromInside(encryptedText);
             }
         }
         private static string Decrypt(char[,] field, string[] textArr)
