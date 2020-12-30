@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Playfair"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Playfair cipher encrypter application" Height="450" Width="800">
+    <Grid Background="#FF85F5F3">
+        <Label Content="Playfair Cipher Encrypter" HorizontalAlignment="Center" Margin="0,16,0,0" VerticalAlignment="Top" Height="48" Width="344" FontSize="26" HorizontalContentAlignment="Center"/>
+        <Label Content="Text to encrypt:" HorizontalAlignment="Left" Margin="33,117,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Key:" HorizontalAlignment="Left" Margin="112,150,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Encrypted text:" HorizontalAlignment="Left" Margin="36,182,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Text to decrypt" HorizontalAlignment="Left" Margin="36,278,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Key:" HorizontalAlignment="Left" Margin="112,312,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Decrypted text:" HorizontalAlignment="Left" Margin="34,345,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Encrypter" HorizontalAlignment="Center" Margin="0,64,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Label Content="Decrypter" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="24" Margin="0,228,0,0"/>
+        <TextBox x:Name="EncryptInput" HorizontalAlignment="Left" Margin="162,121,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="24"/>
+        <TextBox x:Name="EncryptKey" HorizontalAlignment="Left" Margin="162,154,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="24"/>
+        <TextBox x:Name="EncryptOutput" HorizontalAlignment="Left" Margin="162,186,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="24"/>
+        <TextBox x:Name="DecryptInput" HorizontalAlignment="Left" Margin="162,282,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="24"/>
+        <TextBox x:Name="DecryptKey" HorizontalAlignment="Left" Margin="162,316,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="24"/>
+        <TextBox x:Name="DecryptOutput" HorizontalAlignment="Left" Margin="162,349,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" Height="24"/>
+        <Button x:Name="EncryptBtn" Content="Encrypt" HorizontalAlignment="Left" Margin="489,76,0,0" VerticalAlignment="Top" Width="83" Height="27"/>
+        <Button x:Name="DecryptBtn" Content="Decrypt" HorizontalAlignment="Left" Margin="489,240,0,0" VerticalAlignment="Top" Width="83" Height="27"/>
+        <TextBox x:Name="KeyTable" HorizontalAlignment="Left" Margin="607,150,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="174"/>
+        <Label Content="Key table:" HorizontalAlignment="Left" Margin="621,106,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Button x:Name="ClearBtn" Content="Clear fields" HorizontalAlignment="Left" Margin="607,349,0,0" VerticalAlignment="Top" Height="24" Width="140"/>
 
     </Grid>
 </Window>
